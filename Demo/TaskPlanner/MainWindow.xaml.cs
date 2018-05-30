@@ -32,7 +32,15 @@ namespace TaskPlanner
             GetAllTasks();
             //CreateTaskScheduler(string.Empty, string.Empty,string.Empty,string.Empty,string.Empty,string.Empty);
         }
-
+        private void Init()
+        {
+            //名称
+            //TaskName
+            //描述
+            //TaskDescription
+            //触发器
+            //TaskTrigger
+        }
         public IRegisteredTaskCollection GetAllTasks()
         {
             TaskScheduler.TaskScheduler ts = new TaskScheduler.TaskScheduler();
@@ -80,9 +88,10 @@ namespace TaskPlanner
                 task.RegistrationInfo.Author = creator;//creator
                 task.RegistrationInfo.Description = description;//description
 
+
                 //set trigger  (IDailyTrigger ITimeTrigger)
                 ITimeTrigger tt = (ITimeTrigger)task.Triggers.Create(_TASK_TRIGGER_TYPE2.TASK_TRIGGER_TIME);
-                tt.Repetition.Interval = interval;// format PT1H1M==1小时1分钟 设置的值最终都会转成分钟加入到触发器
+                tt.Repetition.Interval = TimeSpan.FromDays(1).TotalMinutes.ToString();// format PT1H1M==1小时1分钟 设置的值最终都会转成分钟加入到触发器
                 tt.StartBoundary = startBoundary;//start time
 
                 //set action
@@ -108,6 +117,26 @@ namespace TaskPlanner
             }
 
         }
+
+        private void s(string creator, string taskName, string path, string interval, string startBoundary, string description) {
+            //new scheduler
+            TaskScheduler.TaskScheduler scheduler = new TaskScheduler.TaskScheduler();
+            //pc-name/ip,username,domain,password
+            scheduler.Connect(null, null, null, null);
+            //get scheduler folder
+            ITaskFolder folder = scheduler.GetFolder("\\");
+
+
+            //set base attr 
+            ITaskDefinition task = scheduler.NewTask(0);
+            task.RegistrationInfo.Author = creator;//creator
+            task.RegistrationInfo.Description = description;//description
+
+            //IDailyTrigger dailyTrigger = new 
+        }
+
+
+
 
         /// <summary>
         /// delete task
@@ -140,6 +169,14 @@ namespace TaskPlanner
                 }
             }
             return isExists;
+        }
+
+        private void TaskTriggerGroup_Click (object sender, RoutedEventArgs e)
+        {
+            if (sender == DailyRadio)
+            {
+
+            }
         }
     }
 }

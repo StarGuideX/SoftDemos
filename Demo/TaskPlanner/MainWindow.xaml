@@ -5,6 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TaskPlanner"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Button x:Name="button" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        Title="MainWindow" Height="720" Width="1080">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" VerticalAlignment="Center">
+            <Label Content="名称："/>
+            <TextBox x:Name="TaskName" Width="120" Margin="5"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" VerticalAlignment="Center">
+            <Label Content="描述："/>
+            <TextBox x:Name="TaskDescription" Width="240" Margin="5"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" VerticalAlignment="Center">
+            <Label Content="触发器："/>
+            <RadioButton x:Name="DailyRadio" Content="每天" HorizontalAlignment="Left" Margin="5" GroupName="TaskTrigger" Click="TaskTriggerGroup_Click"/>
+            <RadioButton Content="每周" HorizontalAlignment="Left" Margin="5" GroupName="TaskTrigger" Click="TaskTriggerGroup_Click"/>
+            <RadioButton Content="每月" HorizontalAlignment="Left" Margin="5" GroupName="TaskTrigger" Click="TaskTriggerGroup_Click"/>
+            <RadioButton x:Name="TimeRadio" Content="一次" HorizontalAlignment="Left" Margin="5" GroupName="TaskTrigger" Click="TaskTriggerGroup_Click"/>
+        </StackPanel>
+        
+    </Grid>
 </Window>
