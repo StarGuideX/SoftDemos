@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{D24D9B90-4CBA-4EA7-9B47-87F55CD60437}"
 EndProject
@@ -9,9 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TaskplannerDemo", "Taskplan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskPlanner", "TaskPlanner\TaskPlanner.csproj", "{46058963-EFFB-417F-A1C0-692AC9224329}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CefWeBrowserWpf", "CefWeBrowserWpf", "{D9CF00F9-AB7F-41F0-9A31-9014F2963BE4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebDriverDemo", "WebDriverDemo", "{66F849C0-D941-4F6C-9E32-1204A77F1350}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CefWebBrowser", "CefWebBrowser\CefWebBrowser.csproj", "{93B70BA9-3F1A-4465-AA26-835683A00ABA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDiverWpf", "WebDiverWpf\WebDiverWpf.csproj", "{D5C1D608-37BC-47B3-85E0-011D3D9C1D67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,24 +47,27 @@ Global
 		{46058963-EFFB-417F-A1C0-692AC9224329}.Release|x64.Build.0 = Release|x64
 		{46058963-EFFB-417F-A1C0-692AC9224329}.Release|x86.ActiveCfg = Release|x86
 		{46058963-EFFB-417F-A1C0-692AC9224329}.Release|x86.Build.0 = Release|x86
-		{93B70BA9-3F1A-4465-AA26-835683A00ABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{93B70BA9-3F1A-4465-AA26-835683A00ABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{93B70BA9-3F1A-4465-AA26-835683A00ABA}.Debug|x64.ActiveCfg = Debug|x64
-		{93B70BA9-3F1A-4465-AA26-835683A00ABA}.Debug|x64.Build.0 = Debug|x64
-		{93B70BA9-3F1A-4465-AA26-835683A00ABA}.Debug|x86.ActiveCfg = Debug|x86
-		{93B70BA9-3F1A-4465-AA26-835683A00ABA}.Debug|x86.Build.0 = Debug|x86
-		{93B70BA9-3F1A-4465-AA26-835683A00ABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{93B70BA9-3F1A-4465-AA26-835683A00ABA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{93B70BA9-3F1A-4465-AA26-835683A00ABA}.Release|x64.ActiveCfg = Release|x64
-		{93B70BA9-3F1A-4465-AA26-835683A00ABA}.Release|x64.Build.0 = Release|x64
-		{93B70BA9-3F1A-4465-AA26-835683A00ABA}.Release|x86.ActiveCfg = Release|x86
-		{93B70BA9-3F1A-4465-AA26-835683A00ABA}.Release|x86.Build.0 = Release|x86
+		{D5C1D608-37BC-47B3-85E0-011D3D9C1D67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5C1D608-37BC-47B3-85E0-011D3D9C1D67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5C1D608-37BC-47B3-85E0-011D3D9C1D67}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D5C1D608-37BC-47B3-85E0-011D3D9C1D67}.Debug|x64.Build.0 = Debug|Any CPU
+		{D5C1D608-37BC-47B3-85E0-011D3D9C1D67}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D5C1D608-37BC-47B3-85E0-011D3D9C1D67}.Debug|x86.Build.0 = Debug|Any CPU
+		{D5C1D608-37BC-47B3-85E0-011D3D9C1D67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5C1D608-37BC-47B3-85E0-011D3D9C1D67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5C1D608-37BC-47B3-85E0-011D3D9C1D67}.Release|x64.ActiveCfg = Release|Any CPU
+		{D5C1D608-37BC-47B3-85E0-011D3D9C1D67}.Release|x64.Build.0 = Release|Any CPU
+		{D5C1D608-37BC-47B3-85E0-011D3D9C1D67}.Release|x86.ActiveCfg = Release|Any CPU
+		{D5C1D608-37BC-47B3-85E0-011D3D9C1D67}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{46058963-EFFB-417F-A1C0-692AC9224329} = {88A34467-9812-4A6C-8FEB-4FA0BCF1380E}
-		{93B70BA9-3F1A-4465-AA26-835683A00ABA} = {D9CF00F9-AB7F-41F0-9A31-9014F2963BE4}
+		{D5C1D608-37BC-47B3-85E0-011D3D9C1D67} = {66F849C0-D941-4F6C-9E32-1204A77F1350}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4FDCAB51-C735-465B-BD69-BD0E5AF40663}
 	EndGlobalSection
 EndGlobal
