@@ -5,9 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WebDiverWpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="100" Width="300" Closed="Window_Closed">
+        Title="MainWindow" Height="200" Width="300" Closed="Window_Closed">
     <StackPanel DockPanel.Dock="Top">
+        <TextBox x:Name="UserNameTB"></TextBox>
+        <TextBox x:Name="PasswordTB"></TextBox>
         <Button Content="跳转京东" x:Name="start" Height="30" Width="60" Click="start_Click"></Button>
-        <Button Content="XXXX66666" x:Name="order" Height="30" Width="60" Click="order_Click"></Button>
+        <Button Content="诺基亚x6" x:Name="order" Height="30" Width="60" Click="order_Click"></Button>
+        <Button Content="秒杀商品（通用）" x:Name="allMiaosha" Height="30" Width="100" Click="miaosha_Click"></Button>
+        <Button Content="秒杀商品（单个商品）" x:Name="singleMiaosha" Height="30" Width="100" Click="singleMiaosha_Click"></Button>
     </StackPanel>
 </Window>

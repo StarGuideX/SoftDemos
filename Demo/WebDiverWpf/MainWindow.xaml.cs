@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -17,6 +18,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.WebRequestMethods;
 
 namespace WebDiverWpf
 {
@@ -30,7 +32,8 @@ namespace WebDiverWpf
         private readonly string loginUrl = "https://passport.jd.com/new/login.aspx";
         private readonly string orderUrl = "https://marathon.jd.com/seckill/seckill.action?skuId=7299780&num=1&rid=1527661627";
         private readonly string failUrl = "https://marathon.jd.com/koFail.html";
-        private readonly string jdUrl ="https://www.jd.com/";
+        private readonly string jdUrl = "https://www.jd.com/";
+        private TimeSpan sleepmm = TimeSpan.FromMilliseconds(2);
         public MainWindow()
         {
             InitializeComponent();
@@ -38,10 +41,24 @@ namespace WebDiverWpf
 
         private void start_Click(object sender, RoutedEventArgs e)
         {
-            driver = new FirefoxDriver(@"C:\Users\Stone\Desktop\WebDriver");
-            //打开指定的URL地址
-            driver.Navigate().GoToUrl(loginUrl);
+            string username = UserNameTB.Text;
+            string password = PasswordTB.Text;
 
+            //打开jd
+            string exePath = System.Environment.CurrentDirectory + @"\BrowerEXE";
+            driver = new FirefoxDriver(exePath);
+            driver.Navigate().GoToUrl(loginUrl);
+            Thread.Sleep(sleepmm);
+            IWebElement e1 = driver.FindElement(By.LinkText("账户登录"));
+            e1.Click();
+            driver.FindElement(By.Id("loginname")).SendKeys(username);
+            Thread.Sleep(sleepmm);
+            driver.FindElement(By.Id("nloginpwd")).SendKeys(password);
+            Thread.Sleep(sleepmm);
+            driver.FindElement(By.Id("loginsubmit")).Click();
+
+            //"banner-miaosha"
+            //验证码
         }
 
         private void order_Click(object sender, RoutedEventArgs e)
@@ -50,17 +67,17 @@ namespace WebDiverWpf
             {
                 driver.Navigate().GoToUrl(orderUrl);
                 driver.FindElement(By.Id("tryBtn")).Click();
-                Thread.Sleep(100);
+                Thread.Sleep(sleepmm);
                 ReadOnlyCollection<IWebElement> elements = driver.FindElements(By.ClassName("btn-submit"));
-                Thread.Sleep(100);
+                Thread.Sleep(sleepmm);
                 elements[0].Click();
-                Thread.Sleep(100);
+                Thread.Sleep(sleepmm);
                 elements[1].Click();
-                Thread.Sleep(100);
+                Thread.Sleep(sleepmm);
                 driver.FindElement(By.Id("invoiceMobile")).SendKeys("13821003012");
-                Thread.Sleep(100);
+                Thread.Sleep(sleepmm);
                 elements[2].Click();
-                Thread.Sleep(100);
+                Thread.Sleep(sleepmm);
                 driver.FindElement(By.Id("order-submit")).Click();
             }
         }
@@ -69,6 +86,25 @@ namespace WebDiverWpf
         {
             driver.Close();
             this.Close();
+        }
+
+        private void miaosha_Click(object sender, RoutedEventArgs e)
+        {
+            Timer timer = new Timer();
+            timer
+        }
+
+        private void singleMiaosha_Click(object sender, RoutedEventArgs e)
+        {
+            driver.FindElement(By.Id("InitCartUrl")).Click();//driver.FindElement(By.LinkText("加入购物车"));
+            Thread.Sleep(TimeSpan.FromMilliseconds(100));
+            driver.FindElement(By.Id("GotoShoppingCart")).Click();//driver.FindElement(By.LinkText("去购物车结算"));
+            Thread.Sleep(sleepmm);
+            driver.FindElement(By.Id("toggle-checkboxes_down")).Click(); //driver.FindElement(By.LinkText("全选"));
+            Thread.Sleep(sleepmm);
+            driver.FindElement(By.LinkText("去结算")).Click();
+            Thread.Sleep(sleepmm);
+            driver.FindElement(By.Id("order-submit")).Click();//text:提交订单
         }
     }
 }
