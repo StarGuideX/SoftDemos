@@ -63,23 +63,31 @@ namespace WebDiverWpf
 
         private void order_Click(object sender, RoutedEventArgs e)
         {
-            if (driver.Url.StartsWith(failUrl) || driver.Url.Equals(jdUrl))
+            try
             {
-                driver.Navigate().GoToUrl(orderUrl);
-                driver.FindElement(By.Id("tryBtn")).Click();
-                Thread.Sleep(sleepmm);
-                ReadOnlyCollection<IWebElement> elements = driver.FindElements(By.ClassName("btn-submit"));
-                Thread.Sleep(sleepmm);
-                elements[0].Click();
-                Thread.Sleep(sleepmm);
-                elements[1].Click();
-                Thread.Sleep(sleepmm);
-                driver.FindElement(By.Id("invoiceMobile")).SendKeys("13821003012");
-                Thread.Sleep(sleepmm);
-                elements[2].Click();
-                Thread.Sleep(sleepmm);
-                driver.FindElement(By.Id("order-submit")).Click();
+                if (driver.Url.StartsWith(failUrl) || driver.Url.Equals(jdUrl) || driver.Url.Equals("https://item.jd.com/7299780.html"))
+                {
+                    driver.Navigate().GoToUrl(orderUrl);
+                    driver.FindElement(By.Id("tryBtn")).Click();
+                    Thread.Sleep(sleepmm);
+                    ReadOnlyCollection<IWebElement> elements = driver.FindElements(By.ClassName("btn-submit"));
+                    Thread.Sleep(sleepmm);
+                    elements[0].Click();
+                    Thread.Sleep(sleepmm);
+                    elements[1].Click();
+                    Thread.Sleep(sleepmm);
+                    driver.FindElement(By.Id("invoiceMobile")).SendKeys("13821003012");
+                    Thread.Sleep(sleepmm);
+                    elements[2].Click();
+                    Thread.Sleep(sleepmm);
+                    driver.FindElement(By.Id("order-submit")).Click();
+                }
             }
+            catch (Exception)
+            {
+                driver.Navigate().GoToUrl(jdUrl);
+            }
+            
         }
 
         private void Window_Closed(object sender, EventArgs e)
@@ -90,8 +98,8 @@ namespace WebDiverWpf
 
         private void miaosha_Click(object sender, RoutedEventArgs e)
         {
-            Timer timer = new Timer();
-            timer
+            //Timer timer = new Timer();
+            //timer
         }
 
         private void singleMiaosha_Click(object sender, RoutedEventArgs e)
@@ -105,6 +113,11 @@ namespace WebDiverWpf
             driver.FindElement(By.LinkText("去结算")).Click();
             Thread.Sleep(sleepmm);
             driver.FindElement(By.Id("order-submit")).Click();//text:提交订单
+        }
+
+        private void b2_Click(object sender, RoutedEventArgs e)
+        {
+            driver.Navigate().GoToUrl("https://item.jd.com/7299780.html");
         }
     }
 }

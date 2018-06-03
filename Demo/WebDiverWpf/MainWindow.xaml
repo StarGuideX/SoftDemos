@@ -10,6 +10,7 @@
         <TextBox x:Name="UserNameTB"></TextBox>
         <TextBox x:Name="PasswordTB"></TextBox>
         <Button Content="跳转京东" x:Name="start" Height="30" Width="60" Click="start_Click"></Button>
+        <Button Content="2b" x:Name="b2" Height="30" Width="60" Click="b2_Click"></Button>
         <Button Content="诺基亚x6" x:Name="order" Height="30" Width="60" Click="order_Click"></Button>
         <Button Content="秒杀商品（通用）" x:Name="allMiaosha" Height="30" Width="100" Click="miaosha_Click"></Button>
         <Button Content="秒杀商品（单个商品）" x:Name="singleMiaosha" Height="30" Width="100" Click="singleMiaosha_Click"></Button>
