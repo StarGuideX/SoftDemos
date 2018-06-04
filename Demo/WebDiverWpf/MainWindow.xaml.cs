@@ -28,7 +28,7 @@ namespace WebDiverWpf
     /// </summary>
     public partial class MainWindow : Window
     {
-        private IWebDriver driver;
+        private FirefoxDriver driver;
         private readonly string loginUrl = "https://passport.jd.com/new/login.aspx";
         private readonly string orderUrl = "https://marathon.jd.com/seckill/seckill.action?skuId=7299780&num=1&rid=1527661627";
         private readonly string failUrl = "https://marathon.jd.com/koFail.html";
@@ -51,11 +51,15 @@ namespace WebDiverWpf
                 driver = new FirefoxDriver(exePath);
                 driver.Navigate().GoToUrl(loginUrl);
                 Thread.Sleep(sleepmm);
-                IWebElement e1 = driver.FindElement(By.LinkText("账户登录"));
-                e1.Click();
-                driver.FindElement(By.Id("loginname")).SendKeys(username);
-                Thread.Sleep(sleepmm);
-                driver.FindElement(By.Id("nloginpwd")).SendKeys(password);
+
+                FirefoxWebElement e1 = (FirefoxWebElement)driver.FindElementById("sss");
+
+
+                //IWebElement e1 = driver.FindElement(By.LinkText("账户登录"));
+                //e1.Click();
+                //driver.FindElement(By.Id("loginname")).SendKeys(username);
+                //Thread.Sleep(sleepmm);
+                //driver.FindElement(By.Id("nloginpwd")).SendKeys(password);
                 //Thread.Sleep(sleepmm);
                 //driver.FindElement(By.Id("loginsubmit")).Click();
             }
