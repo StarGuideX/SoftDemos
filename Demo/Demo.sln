@@ -13,6 +13,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebDriverDemo", "WebDriverD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDiverWpf", "WebDiverWpf\WebDiverWpf.csproj", "{D5C1D608-37BC-47B3-85E0-011D3D9C1D67}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Seckill", "Seckill", "{A19F8D55-EA84-4052-9F53-2FC912377C64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seckill.Main", "Seckill.Main\Seckill.Main.csproj", "{81EB9BF2-C243-4910-9700-17C40037CF5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stone.CommonLib", "Stone.CommonLib\Stone.CommonLib.csproj", "{985F490A-E7B4-4455-8740-5D76F0146282}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +65,30 @@ Global
 		{D5C1D608-37BC-47B3-85E0-011D3D9C1D67}.Release|x64.Build.0 = Release|Any CPU
 		{D5C1D608-37BC-47B3-85E0-011D3D9C1D67}.Release|x86.ActiveCfg = Release|Any CPU
 		{D5C1D608-37BC-47B3-85E0-011D3D9C1D67}.Release|x86.Build.0 = Release|Any CPU
+		{81EB9BF2-C243-4910-9700-17C40037CF5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81EB9BF2-C243-4910-9700-17C40037CF5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81EB9BF2-C243-4910-9700-17C40037CF5E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{81EB9BF2-C243-4910-9700-17C40037CF5E}.Debug|x64.Build.0 = Debug|Any CPU
+		{81EB9BF2-C243-4910-9700-17C40037CF5E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{81EB9BF2-C243-4910-9700-17C40037CF5E}.Debug|x86.Build.0 = Debug|Any CPU
+		{81EB9BF2-C243-4910-9700-17C40037CF5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81EB9BF2-C243-4910-9700-17C40037CF5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81EB9BF2-C243-4910-9700-17C40037CF5E}.Release|x64.ActiveCfg = Release|Any CPU
+		{81EB9BF2-C243-4910-9700-17C40037CF5E}.Release|x64.Build.0 = Release|Any CPU
+		{81EB9BF2-C243-4910-9700-17C40037CF5E}.Release|x86.ActiveCfg = Release|Any CPU
+		{81EB9BF2-C243-4910-9700-17C40037CF5E}.Release|x86.Build.0 = Release|Any CPU
+		{985F490A-E7B4-4455-8740-5D76F0146282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{985F490A-E7B4-4455-8740-5D76F0146282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{985F490A-E7B4-4455-8740-5D76F0146282}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{985F490A-E7B4-4455-8740-5D76F0146282}.Debug|x64.Build.0 = Debug|Any CPU
+		{985F490A-E7B4-4455-8740-5D76F0146282}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{985F490A-E7B4-4455-8740-5D76F0146282}.Debug|x86.Build.0 = Debug|Any CPU
+		{985F490A-E7B4-4455-8740-5D76F0146282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{985F490A-E7B4-4455-8740-5D76F0146282}.Release|Any CPU.Build.0 = Release|Any CPU
+		{985F490A-E7B4-4455-8740-5D76F0146282}.Release|x64.ActiveCfg = Release|Any CPU
+		{985F490A-E7B4-4455-8740-5D76F0146282}.Release|x64.Build.0 = Release|Any CPU
+		{985F490A-E7B4-4455-8740-5D76F0146282}.Release|x86.ActiveCfg = Release|Any CPU
+		{985F490A-E7B4-4455-8740-5D76F0146282}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +96,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{46058963-EFFB-417F-A1C0-692AC9224329} = {88A34467-9812-4A6C-8FEB-4FA0BCF1380E}
 		{D5C1D608-37BC-47B3-85E0-011D3D9C1D67} = {66F849C0-D941-4F6C-9E32-1204A77F1350}
+		{81EB9BF2-C243-4910-9700-17C40037CF5E} = {A19F8D55-EA84-4052-9F53-2FC912377C64}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4FDCAB51-C735-465B-BD69-BD0E5AF40663}
