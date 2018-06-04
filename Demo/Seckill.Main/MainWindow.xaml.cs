@@ -26,18 +26,26 @@ namespace Seckill.Main
     public partial class MainWindow : Window
     {
         private TimeSpan sleepTime = TimeSpan.FromMilliseconds(100);
+        IWebDriver webDriver;
+        ISeckillMachine machine;
         public MainWindow()
         {
             InitializeComponent();
+            string exePath = System.Environment.CurrentDirectory + @"\BrowerEXE";
+            webDriver = new FirefoxDriver(exePath);
+            Good good = new Good();
+            good.GoodUrl = "https://item.jd.com/4631945.html";
+            machine = new JDSeckillMachine(webDriver, good);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Good good = new Good();
-            good.GoodUrl = "https://item.jd.com/3938956.html";
+            machine.Login();
+        }
 
-            SeckillMachine sm = new JDSeckillMachine();
-            sm.Login();
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            machine.WaitSeckill();
         }
     }
 }

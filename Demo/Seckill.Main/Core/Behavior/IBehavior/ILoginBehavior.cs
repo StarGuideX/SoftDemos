@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Seckill.Main.Core.Machine
+namespace Seckill.Main.Core.Behavior
 {
-    interface ILoginBehavior
+    public interface ILoginBehavior
     {
+        void Login();
     }
 }

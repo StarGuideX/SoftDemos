@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Seckill.Main"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <StackPanel>
+        <Button Height="30" Width="60" Content="456" Click="Button_Click_1"></Button>
         <Button Height="30" Width="60" Content="123" Click="Button_Click" ></Button>
-    </Grid>
+    </StackPanel>
 </Window>

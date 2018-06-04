@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Seckill.Main.Core.Machine.ConcreteState
+namespace Seckill.Main.Core.Behavior
 {
-    class SeckillingState
+    public interface IWaitSeckillBehavior
     {
+        void WaitSeckill();
     }
 }

@@ -35,6 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
@@ -67,13 +68,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Core\Machine1111\ConcreteState\LoginState.cs" />
-    <Compile Include="Core\Machine1111\ConcreteState\SeckillingState.cs" />
-    <Compile Include="Core\Machine1111\IState\IMachineState.cs" />
-    <Compile Include="Core\Machine1111\JDSeckillMachine.cs" />
-    <Compile Include="Core\Machine1111\SeckillMachine.cs" />
-    <Compile Include="Core\Machine\ILoginBehavior.cs" />
-    <Compile Include="Core\Machine\ISeckillMachine.cs" />
+    <Compile Include="Core\Behavior\BehaviorImpl\JDLoginBehavior.cs" />
+    <Compile Include="Core\Behavior\BehaviorImpl\JDWaitSeckillBehavior.cs" />
+    <Compile Include="Core\Behavior\IBehavior\ILoginBehavior.cs" />
+    <Compile Include="Core\Behavior\IBehavior\ISeckilledBehavior.cs" />
+    <Compile Include="Core\Behavior\IBehavior\ISeckillingBahavior.cs" />
+    <Compile Include="Core\Behavior\IBehavior\IWaitSeckillBehavior.cs" />
+    <Compile Include="Core\Machine\IMachine\ISeckillMachine.cs" />
+    <Compile Include="Core\Machine\MachineImpl\JDSeckillMachine.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
