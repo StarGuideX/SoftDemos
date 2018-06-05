@@ -13,14 +13,14 @@ namespace Seckill.Main.Core.Machine
     {
         private IWebDriver _driver;
         private ILoginBehavior loginBehavior;
-        private IWaitSeckillBehavior waitSeckillBehavior;
+        private ISeckillBahavior seckillBahavior;
         private Good _good;
         public JDSeckillMachine(IWebDriver driver, Good good)
         {
             _driver = driver;
             _good = good;
             loginBehavior = new JDLoginBehavior(_driver);
-            waitSeckillBehavior = new JDWaitSeckillBehavior(_driver, _good);
+            seckillBahavior = new JDSeckillBehavior(_driver, _good);
         }
 
         public void Login()
@@ -30,19 +30,13 @@ namespace Seckill.Main.Core.Machine
 
         public void WaitSeckill()
         {
-            waitSeckillBehavior.WaitSeckill();
+
         }
 
-        public void Seckilled()
+        public void Seckill()
         {
-            throw new NotImplementedException();
+            seckillBahavior.Seckill();
         }
-
-        public void Seckilling()
-        {
-            throw new NotImplementedException();
-        }
-
 
     }
 }

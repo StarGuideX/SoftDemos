@@ -34,7 +34,7 @@ namespace Seckill.Main
             string exePath = System.Environment.CurrentDirectory + @"\BrowerEXE";
             webDriver = new FirefoxDriver(exePath);
             Good good = new Good();
-            good.GoodUrl = "https://item.jd.com/4631945.html";
+            good.GoodUrl = "https://item.jd.com/1887321.html";
             machine = new JDSeckillMachine(webDriver, good);
         }
 
@@ -45,7 +45,7 @@ namespace Seckill.Main
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            machine.WaitSeckill();
+            machine.Seckill();
         }
     }
 }

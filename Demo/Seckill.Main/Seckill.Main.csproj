@@ -69,11 +69,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Core\Behavior\BehaviorImpl\JDLoginBehavior.cs" />
-    <Compile Include="Core\Behavior\BehaviorImpl\JDWaitSeckillBehavior.cs" />
+    <Compile Include="Core\Behavior\BehaviorImpl\JDSeckillBehavior.cs" />
     <Compile Include="Core\Behavior\IBehavior\ILoginBehavior.cs" />
-    <Compile Include="Core\Behavior\IBehavior\ISeckilledBehavior.cs" />
-    <Compile Include="Core\Behavior\IBehavior\ISeckillingBahavior.cs" />
-    <Compile Include="Core\Behavior\IBehavior\IWaitSeckillBehavior.cs" />
+    <Compile Include="Core\Behavior\IBehavior\ISeckillBahavior.cs" />
     <Compile Include="Core\Machine\IMachine\ISeckillMachine.cs" />
     <Compile Include="Core\Machine\MachineImpl\JDSeckillMachine.cs" />
     <Compile Include="MainWindow.xaml.cs">

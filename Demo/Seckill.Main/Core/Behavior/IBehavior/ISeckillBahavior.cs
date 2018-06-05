@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Seckill.Main.Core.Behavior
 {
-    public interface ISeckilledBehavior
+    public interface ISeckillBahavior
     {
-        void Seckilled();
+        void Seckill();
     }
 }

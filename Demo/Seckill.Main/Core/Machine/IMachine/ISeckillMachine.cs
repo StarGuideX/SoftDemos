@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Seckill.Main.Core.Machine
 {
-    public interface ISeckillMachine: ILoginBehavior,IWaitSeckillBehavior,ISeckillingBahavior,ISeckilledBehavior
+    public interface ISeckillMachine: ILoginBehavior,ISeckillBahavior
     {
     }
 }
